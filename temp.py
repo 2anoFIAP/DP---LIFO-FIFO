@@ -146,7 +146,7 @@ for i in range(len(escritorio)):
 restaurante = []
 for i in range(3):
     nome = input("Diga seu pedido: ")
-    tempo = input("Digite o tempo de preparo do pedido: ")
+    tempo = int(input("Digite o tempo de preparo do pedido: "))
     pedido = (nome, tempo)
     restaurante.append(pedido)
 print(restaurante)
