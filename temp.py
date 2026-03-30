@@ -143,7 +143,7 @@ for i in range(len(escritorio)):
 # - Crie um programa que adicione pedidos a fila e exiba a ordem de preparr.
 # - Ao servir um pedido, remova-o da fila e exiba quem sera servido em seguida.
 
-restaurante = []
+'''restaurante = []
 for i in range(3):
     nome = input("Diga seu pedido: ")
     tempo = int(input("Digite o tempo de preparo do pedido: "))
@@ -156,7 +156,7 @@ print(restaurante)
 
 for pedido in restaurante:
     print(f"Pedido: {pedido[0]} / Tempo: {pedido[1]}")
-
+'''
 
 
 
@@ -166,20 +166,18 @@ for pedido in restaurante:
 # - Se houver empate, siga a ordem de chegada.
 '''
 hospital = []
-nivel_hospital = []
-for i in range(5):
-    atendimento = input("Qual seu nome: ")
-    hospital.append(atendimento)
-    atendimento2 = input("E qual seu nivel de dor")
-    nivel_hospital.append(atendimento2)
-    print(atendimento)
-    print(atendimento2)
-while hospital and nivel_hospital:
-    pacientes = hospital.pop() and nivel_hospital.pop()
-    print(f"Atendimentos nessa ordem {pacientes}")
+for  i in range(6):
+    nome = input("Diga seu nome: ")
+    urgencia = int(input("Qual o nivel da sua urgencia: (1-5)"))
+    consulta = (urgencia, nome)
+    hospital.append(consulta)
+print(hospital)
 
-'''
+hospital.sort(reverse=True)
+print(hospital)
 
+for consulta in hospital:
+    print(f"Atendimento: {consulta[0]} / Proximo: {consulta[1]}")'''
 
 
 #Exercicio 5 : Desenvolva um algoritmo para adicionar e remover clientes em ma lista.
@@ -189,5 +187,33 @@ while hospital and nivel_hospital:
 #Opcao 3 = Mostrar fila
 #Opcao 4 = Sair
 
+
+fila_clientes = []
+
+while True:
+    print("\n--- MENU DE ATENDIMENTO ---")
+    print("1 - Adicionar Cliente")
+    print("2 - Atender Cliente")
+    print("3 - Mostrar Fila")
+    print("4 - Sair")
+
+    opcao = input("Escolha uma opcao: ")
+
+    if opcao == '1':
+        nome = input("Qual seu nome: ")
+        fila_clientes.append(nome)
+    elif opcao == '2':
+        if fila_clientes:
+            atendido = fila_clientes.pop(0)
+            print(f"Atendendo o cliente: {atendido}")
+        else:
+            print("Nao ha ninguem na fila para atender")
+    elif opcao == '3':
+        print(f"fila atual: {fila_clientes}")
+    elif opcao == '4':
+        print("Saindo......")
+        break
+    else:
+        print("Opcao invalida!")
 
 
