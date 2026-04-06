@@ -276,7 +276,8 @@ class Pilha:
             return self.itens.pop()
         return "Pilha Vazia"
     def peek(self):
-        return len(self.itens) == 0
+        if not self.is_empty():
+            return self.itens[-1]
     def is_empty(self):
         return len(self.itens) == 0
     def mostrar(self):
