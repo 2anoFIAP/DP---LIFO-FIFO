@@ -162,9 +162,9 @@ for pedido in restaurante:
 
 #Exercicio 4 : Um hospital recebe pacientes e os coloca em uma fila de atendimento.
 #Cada paciente tem um nivel de urgencia que varia de 1 (menos urgente) a 5 (mais urgente)
-# - Crie um programa que adicioe pacientes a fila e atenda primeiro aqueles com mairo nivel de urgencia
+# - Crie um programa que adicioe pacientes a fila e atenda primeiro aqueles com maior nivel de urgencia
 # - Se houver empate, siga a ordem de chegada.
-'''
+
 hospital = []
 for  i in range(6):
     nome = input("Diga seu nome: ")
@@ -177,7 +177,7 @@ hospital.sort(reverse=True)
 print(hospital)
 
 for consulta in hospital:
-    print(f"Atendimento: {consulta[0]} / Proximo: {consulta[1]}")'''
+    print(f"Urgencia: {consulta[0]} / Paciente: {consulta[1]}")
 
 
 #Exercicio 5 : Desenvolva um algoritmo para adicionar e remover clientes em ma lista.
@@ -187,7 +187,7 @@ for consulta in hospital:
 #Opcao 3 = Mostrar fila
 #Opcao 4 = Sair
 
-
+'''
 fila_clientes = []
 
 while True:
@@ -216,4 +216,11 @@ while True:
     else:
         print("Opcao invalida!")
 
+
+'''
+
+
+
+
+#HEAP in python
 
