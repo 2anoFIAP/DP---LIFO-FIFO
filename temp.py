@@ -1,3 +1,7 @@
+import heapq
+
+from pandas.core.interchange.from_dataframe import primitive_column_to_ndarray
+
 '''#Ex. 1
 
 fila = ['cliente1', 'cliente2', 'cliente3', 'cliente4', 'cliente5']
@@ -164,7 +168,7 @@ for pedido in restaurante:
 #Cada paciente tem um nivel de urgencia que varia de 1 (menos urgente) a 5 (mais urgente)
 # - Crie um programa que adicioe pacientes a fila e atenda primeiro aqueles com maior nivel de urgencia
 # - Se houver empate, siga a ordem de chegada.
-
+'''
 hospital = []
 for  i in range(6):
     nome = input("Diga seu nome: ")
@@ -177,7 +181,7 @@ hospital.sort(reverse=True)
 print(hospital)
 
 for consulta in hospital:
-    print(f"Urgencia: {consulta[0]} / Paciente: {consulta[1]}")
+    print(f"Urgencia: {consulta[0]} / Paciente: {consulta[1]}")'''
 
 
 #Exercicio 5 : Desenvolva um algoritmo para adicionar e remover clientes em ma lista.
@@ -223,4 +227,67 @@ while True:
 
 
 #HEAP in python
+'''fila = []
+
+heapq.heappush(fila, (1, "Emergencia"))
+heapq.heappush(fila, (3, "Consulta"))
+heapq.heappush(fila, (2, "Exame"))
+print(fila)
+
+while fila:
+    print(heapq.heappop(fila))
+'''
+'''fila = []
+
+#Ex2
+heapq.heappush(fila, ("Emergencia", 2))
+heapq.heappush(fila, ("Consulta", 1))
+heapq.heappush(fila, ("Exame", 3))
+print(fila)
+
+#converter para heap correto
+fila_corrigida = [(prioridade, nome) for nome, prioridade in fila]
+print(fila_corrigida)
+'''
+
+#CLASS em python
+'''class Pilha:
+    def __init__(self):
+        self.itens = []
+
+    def push(self, item):
+        self.itens.append(item)
+
+    def pop(self):
+        return self.itens.pop()
+
+
+p = Pilha()
+p.push(10)
+print(itens)'''
+
+class Pilha:
+    def __init__(self):
+        self.itens = []
+    def push(self, item):
+        self.itens.append(item)
+    def is_empty(self):
+        return
+    def pop(self):
+        if not self.is_empty:
+            return self.itens.pop()
+        return "Pilha Vazia"
+    def peek(self):
+        return len(self.itens) == 0
+
+    def mostrar(self):
+        return self.itens
+
+p = Pilha()
+p.push(10)
+p.pop()
+p.peek()
+print(p.itens)
+
+
 
