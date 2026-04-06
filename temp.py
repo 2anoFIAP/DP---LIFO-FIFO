@@ -271,23 +271,27 @@ class Pilha:
         self.itens = []
     def push(self, item):
         self.itens.append(item)
-    def is_empty(self):
-        return
     def pop(self):
         if not self.is_empty:
             return self.itens.pop()
         return "Pilha Vazia"
     def peek(self):
         return len(self.itens) == 0
-
+    def is_empty(self):
+        return len(self.itens) == 0
     def mostrar(self):
         return self.itens
 
 p = Pilha()
 p.push(10)
-p.pop()
-p.peek()
-print(p.itens)
+p.push(20)
+p.push(30)
+
+print("Pilha: ",p.mostrar())
+print("Topo: ", p.peek())
+
+print("Removido: ", p.pop())
+print("Pilha Final: ", p.mostrar())
 
 
 
