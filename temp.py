@@ -278,6 +278,7 @@ class Pilha:
     def peek(self):
         if not self.is_empty():
             return self.itens[-1]
+        return "Pilha Vazia"
     def is_empty(self):
         return len(self.itens) == 0
     def mostrar(self):
